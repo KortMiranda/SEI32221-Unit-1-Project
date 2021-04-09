@@ -1,6 +1,28 @@
+
 body {
     text-align: center;
     background-color:black;
     background-image: url(resources/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg);
     color: yellow;
+    font-family: arial, sans-serif;
+}
+
+h1{
+    font-family: 'Star Jedi', arial, sans-serif;
+    font-size: 1.75em
+}
+
+h2{
+    font-size: 2.5em
+}
+
+h4 {
+    font-size: 1.5em
+}
+.genButton,
+#submitButton
+ {
+    font-family: 'Star Jedi', arial, sans-serif;
+    cursor: pointer;
+    font-size: 1.25em;
 }

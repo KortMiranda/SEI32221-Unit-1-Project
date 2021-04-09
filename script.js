@@ -28,13 +28,20 @@ async function getData(e) {
     .catch(err => console.log('something went wrong', err))
 }
 
-const checkAnswer= () => {
+const checkAnswer = (event) => {
     if(inputText.value.toLowerCase() === charBack.innerHTML.toLowerCase() || inputText.value === charBack.innerHTML) {
         console.log("true") 
     } else {
         console.log("false")
     }
-    // console.log(inputText.value)
+
 }
+
 genButton.addEventListener('click', getData)
 submitButton.addEventListener('click', checkAnswer)
+// inputText.addEventListener('keypress', function(e1) {
+//     if(e1.keyCode === 'Enter') {
+//         e1.preventDefault()
+//         inputText.click()
+//     }
+// })
