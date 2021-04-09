@@ -9,8 +9,22 @@
 </head>
 <body>
     <h1>Reading & Typing Practice - Star Wars Edition </h1>
-    <h2 class="charHeader"></h2>
-    <button class="genButton">Generate Name</button>
+
+    <div class="front-container">
+        <h2 class="charFront"></h2>
+        <button class="genButton">Generate Name</button>
+    </div>
+
+    <div class="back-container">
+        <h2 class="charBack"></h2>
+        <h4 class="prompt">Type this character's name</h4>
+        
+        <form id = "answerInput">
+            <input type="text" name="inputBar" value="" placeholder="Type name here" id='inputBar'>
+            <input type="button" name="submitButton" value="Correct, is it?" id="submitButton">
+        </form>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
