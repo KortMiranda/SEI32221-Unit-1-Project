@@ -6,9 +6,14 @@ const prompt = document.querySelector('h4')
 const promptText = document.querySelector('.prompt')
 const inputText = document.querySelector('#inputBar')
 const submitButton = document.querySelector('#submitButton')
+const correctModal = document.getElementById('modal-correct')
+const incorrectModal = document.getElementById('modal-incorrect')
+const closeButton = document.getElementById('close')
+const nextCardButton = document.getElementById('next-card')
 
-async function getData(e) {
-    e.preventDefault()
+
+async function getData() {
+    // e.preventDefault()
     let randomId = Math.floor(Math.random() * 80) //has be declared within the function before the url
     const url = `https://swapi.dev/api/people/${randomId}`
     fetch(url)
@@ -17,28 +22,43 @@ async function getData(e) {
     })
     
     .then(data => {
-        //front of card
         charFront.innerText = data.name
-
-        //back of card
         charBack.innerText = data.name
-
         console.log("success!", data)
     })
     .catch(err => console.log('something went wrong', err))
 }
 
-const checkAnswer = (event) => {
+const checkAnswer = () => {
     if(inputText.value.toLowerCase() === charBack.innerHTML.toLowerCase() || inputText.value === charBack.innerHTML) {
-        console.log("true") 
+        return true
     } else {
-        console.log("false")
+        return false
     }
+}
 
+const openModal = () => {
+    if(checkAnswer() === true) {
+    correctModal.style.display = 'block';
+    } else if(checkAnswer() === false) {
+    incorrectModal.style.display = 'block';
+    }
+}
+
+const closeModal = () => {
+    incorrectModal.style.display = 'none';
+    
+}
+
+const nextCard = () => {
+    correctModal.style.display = 'none';
+    getData()
 }
 
 genButton.addEventListener('click', getData)
-submitButton.addEventListener('click', checkAnswer)
+submitButton.addEventListener('click', openModal)
+closeButton.addEventListener('click', closeModal)
+nextCardButton.addEventListener('click', nextCard)
 // inputText.addEventListener('keypress', function(e1) {
 //     if(e1.keyCode === 'Enter') {
 //         e1.preventDefault()
