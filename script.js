@@ -53,6 +53,7 @@ const closeModal = () => {
 const nextCard = () => {
     correctModal.style.display = 'none';
     getData()
+    inputText.getAttribute('placeholder')
 }
 
 genButton.addEventListener('click', getData)
