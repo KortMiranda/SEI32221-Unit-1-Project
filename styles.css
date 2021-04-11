@@ -1,17 +1,29 @@
 /* Color palettes from coolers
 https://coolors.co/000814-001d3d-003566-ffc300-ffd60a
 https://coolors.co/856088-5e354e-cca43b-7f9397-305252*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
 body {
     text-align: center;
     background-color:black;
     background-image: url(resources/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg);
     color: #FFD60A;
     font-family: arial, sans-serif;
+    border: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 h1{
     font-family: 'Star Jedi', arial, sans-serif;
-    font-size: 1.75em
+    font-size: 2.25em;
+    padding: 45px;
 }
 
 h2{
@@ -21,13 +33,88 @@ h2{
 h4 {
     font-size: 1.5em
 }
+
+.scene {
+    background-color: transparent;
+    width: 600px;
+    height: 350px;
+    margin: 0 auto;
+    border-radius: 2px;
+    perspective: 1000px;
+}
+
+.card{ 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid #FFD60A;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 100px;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.card__face--front {
+    background-color: rgba(46, 46, 46, 0.85); 
+}
+
+.card__face--back{
+    background-color: rgba(46, 46, 46, 0.85);
+    transform: rotateY(180deg);
+}
+
+
+.charFront {
+    padding-top: 65px;
+}
+
+.charBack {
+    padding-top: 30px;
+}
+
+
 .genButton,
 #submitButton,
 .modal-button
  {
     font-family: 'Star Jedi', arial, sans-serif;
-    cursor: pointer;
+    
     font-size: 1.25em;
+    color: #FFD60A;
+    background-color: #000814;
+    border: solid 2px #FFD60A;
+    padding: 10px;
+
+}
+
+.genButton,
+#submitButton,
+.modal-button:hover {
+    cursor: pointer;
+
+}
+
+#answerInput{
+    display: flex;
+    justify-content: center;
+}
+
+#inputBar {
+    height: 60px;
+    width: 300px;
+    margin: 10px;
 }
 
 #modal-correct,
@@ -46,23 +133,23 @@ h4 {
 
 #modal-textbox {
     background-color: rgba(82, 82, 82, .90);
-    height: 300px;
+    height: 350px;
     width: 550px;
     border-radius: 5px;
     margin: 150px auto;
     border: solid 2px #FFD60A;
-    padding: 2%;
+    padding: 30px;
     line-height: 120%;
 }
 
 #modal-incorrect img{
-    padding-bottom: 25px;
+    padding: 25px;
 }
 
 #modal-correct img {
-    width: 250px;
+    width: 300px;
     line-height: 75%;
-    padding-bottom: 10px;
+    padding: 30px;
 }
 
 

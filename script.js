@@ -10,10 +10,9 @@ const correctModal = document.getElementById('modal-correct')
 const incorrectModal = document.getElementById('modal-incorrect')
 const closeButton = document.getElementById('close')
 const nextCardButton = document.getElementById('next-card')
-
+const card = document.querySelector('.card')
 
 async function getData() {
-    // e.preventDefault()
     let randomId = Math.floor(Math.random() * 80) //has be declared within the function before the url
     const url = `https://swapi.dev/api/people/${randomId}`
     fetch(url)
@@ -53,13 +52,18 @@ const closeModal = () => {
 const nextCard = () => {
     correctModal.style.display = 'none';
     getData()
-    inputText.getAttribute('placeholder')
+}
+
+const flipped = (event) => {
+    if(event.keyCode == 39 )
+    card.classList.toggle('is-flipped')   
 }
 
 genButton.addEventListener('click', getData)
 submitButton.addEventListener('click', openModal)
 closeButton.addEventListener('click', closeModal)
 nextCardButton.addEventListener('click', nextCard)
+card.addEventListener('keydown', flipped )
 // inputText.addEventListener('keypress', function(e1) {
 //     if(e1.keyCode === 'Enter') {
 //         e1.preventDefault()

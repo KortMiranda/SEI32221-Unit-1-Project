@@ -10,22 +10,27 @@
 </head>
 <body>
     <h1>Reading / Typing Practice - Star Wars Edition </h1>
+ 
+        <div class="scene scene--card">
+            <div class="card">
+                <div class="card__face card__face--front">
+                <h2 class="charFront"></h2>
+                <button class="genButton">Begin</button>
+                </div>
+            
 
-    <div class="front-container">
-        <h2 class="charFront"></h2>
-        <button class="genButton">Begin</button>
-    </div>
-
-    <div class="back-container">
-        <h2 class="charBack"></h2>
-        <h4 class="prompt">Type this character's name</h4>
-        
-        <form id = "answerInput">
-            <input type="text" name="inputBar" value="" placeholder="Type name here" id='inputBar'>
-            <input type="button" name="submitButton" value="Correct, it is?" id="submitButton">
-        </form>
-    </div>
-
+                <div class="card__face card__face--back">
+                    <h2 class="charBack"></h2>
+                    <h4 class="prompt">Type this character's name</h4>
+                    
+                    <form id = "answerInput">
+                        <input type="text" name="inputBar" value="" style='font-size: 30px'placeholder="Type name here" id='inputBar'>
+                        <input type="button" name="submitButton" value="Correct, it is?" id="submitButton">
+                    </form>
+                </div>
+            </div>
+        </div>
+ 
     <div id="modal-correct">
         <div id="modal-textbox">
             <h4>That's correct!</h4>
