@@ -12,7 +12,7 @@ html,
 body {
     text-align: center;
     background-color:black;
-    background-image: url(resources/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg);
+    background-image: url(resources/KeBY2b.gif);
     color: #FFD60A;
     font-family: arial, sans-serif;
     border: 0px;
@@ -34,10 +34,20 @@ h4 {
     font-size: 1.5em
 }
 
+.directions{
+    font-size: 1.75em;
+}
+
+
+span { 
+    border: solid 2px
+}
+
 .scene {
     background-color: transparent;
     width: 600px;
     height: 350px;
+    padding-bottom: 15px;
     margin: 0 auto;
     border-radius: 2px;
     perspective: 1000px;
@@ -90,7 +100,6 @@ h4 {
 .modal-button
  {
     font-family: 'Star Jedi', arial, sans-serif;
-    
     font-size: 1.25em;
     color: #FFD60A;
     background-color: #000814;
@@ -103,7 +112,18 @@ h4 {
 #submitButton,
 .modal-button:hover {
     cursor: pointer;
+}
 
+.genButton:hover {
+    background-color: #1d2a3e;
+}
+
+#submitButton:hover {
+    background-color: #1d2a3e;
+}
+
+.modal-button:hover {
+    background-color: #1d2a3e;
 }
 
 #answerInput{

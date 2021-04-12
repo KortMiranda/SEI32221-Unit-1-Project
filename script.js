@@ -28,12 +28,19 @@ async function getData() {
     .catch(err => console.log('something went wrong', err))
 }
 
+
 const checkAnswer = () => {
     if(inputText.value.toLowerCase() === charBack.innerHTML.toLowerCase() || inputText.value === charBack.innerHTML) {
         return true
     } else {
         return false
     }
+}
+
+const flipped = (keyEvent) => {
+    if(keyEvent.keyCode == 39 || keyEvent.keyCode == 37)
+    card.classList.toggle('is-flipped')   
+    
 }
 
 const openModal = () => {
@@ -49,15 +56,13 @@ const closeModal = () => {
     
 }
 
-const nextCard = () => {
+const nextCard = (keyEvent) => {
     correctModal.style.display = 'none';
-    getData()
+    card.classList.toggle('is-flipped')
+    getData() 
 }
 
-const flipped = (event) => {
-    if(event.keyCode == 39 )
-    card.classList.toggle('is-flipped')   
-}
+
 
 genButton.addEventListener('click', getData)
 submitButton.addEventListener('click', openModal)
