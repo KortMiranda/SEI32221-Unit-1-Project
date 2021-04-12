@@ -11,6 +11,8 @@ const incorrectModal = document.getElementById('modal-incorrect')
 const closeButton = document.getElementById('close')
 const nextCardButton = document.getElementById('next-card')
 const card = document.querySelector('.card')
+const correctAudio = document.querySelector('#correct-audio')
+const incorrectAudio = document.querySelector('#incorrect-audio')
 
 async function getData() {
     let randomId = Math.floor(Math.random() * 80) //has be declared within the function before the url
@@ -43,11 +45,21 @@ const flipped = (keyEvent) => {
     
 }
 
+const triggerCorrectAudio = () => {
+    correctAudio.play();
+}
+
+const triggerIncorrectAudio = () => {
+    incorrectAudio.play();
+}
+
 const openModal = () => {
     if(checkAnswer() === true) {
     correctModal.style.display = 'block';
+    triggerCorrectAudio()
     } else if(checkAnswer() === false) {
     incorrectModal.style.display = 'block';
+    triggerIncorrectAudio();
     }
 }
 

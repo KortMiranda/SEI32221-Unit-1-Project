@@ -40,6 +40,10 @@
             <img src="resources/grogu.png" alt="grogu">
         <div id="correct-footer">
             <button onclick="document.getElementById('inputBar').value = ''" class="modal-button" id="next-card">Next Card</button>
+        <audio id="correct-audio" style="display:none">
+            <source src="resources/lightsaber_02.mp3" type="audio/mp3">
+        </audio>
+        </div>  
         </div>
         </div>
     </div>
@@ -50,6 +54,9 @@
             <img src="resources/han-solo.jpeg" alt="han solo">
         <div class="incorrect-footer">
             <button class="modal-button" id="close">Try again!</button>
+        <audio id="incorrect-audio" style="display:none">
+            <source src="resources/breathing.mp3" type="audio/mp3">
+        </audio>
         </div>
         </div>
     </div>
