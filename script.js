@@ -13,6 +13,14 @@ const nextCardButton = document.getElementById('next-card')
 const card = document.querySelector('.card')
 const correctAudio = document.querySelector('#correct-audio')
 const incorrectAudio = document.querySelector('#incorrect-audio')
+const correctCount = document.querySelector('.correct')
+const incorrectCount = document.querySelector('.incorrect')
+let correctScore = 0
+correctCount.innerHTML = correctScore
+let incorrectScore = 0
+incorrectCount.innerHTML = incorrectScore
+
+
 
 async function getData() {
     let randomId = Math.floor(Math.random() * 80) //has be declared within the function before the url
@@ -29,7 +37,6 @@ async function getData() {
     })
     .catch(err => console.log('something went wrong', err))
 }
-
 
 const checkAnswer = () => {
     if(inputText.value.toLowerCase() === charBack.innerHTML.toLowerCase() || inputText.value === charBack.innerHTML) {
@@ -65,15 +72,18 @@ const openModal = () => {
 
 const closeModal = () => {
     incorrectModal.style.display = 'none';
+    incorrectScore++
+    incorrectCount.innerHTML = incorrectScore
     
 }
 
-const nextCard = (keyEvent) => {
+const nextCard = () => {
     correctModal.style.display = 'none';
     card.classList.toggle('is-flipped')
     getData() 
+    correctScore++
+    correctCount.innerHTML = correctScore
 }
-
 
 
 genButton.addEventListener('click', getData)
