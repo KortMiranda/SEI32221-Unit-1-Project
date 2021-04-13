@@ -73,23 +73,24 @@ const openModal = () => {
     incorrectModal.style.display = 'block';
     triggerIncorrectAudio();
     }
+    
+     
 }
 
 //the button within this modal will prevent the user from moving on until the user gets the input correct
 const closeModal = () => {
     incorrectModal.style.display = 'none';
-    incorrectScore++
-    incorrectCount.innerHTML = incorrectScore //will accumulate how many times the incorrect input is submitted to the score board
+    incorrectScore++ //will accumulate how many times the incorrect input is submitted to the score board
+    incorrectCount.innerHTML = incorrectScore 
     
 }
 
-
+//once the answer is correct and next card is selected, a new card will generate.
 const nextCard = () => {
     correctModal.style.display = 'none';
     card.classList.toggle('is-flipped')
-    // getData() 
-    correctScore++
-    correctCount.innerHTML = correctScore // will accumulate how many times the correct input is submitted to the score board
+    correctScore++ // will accumulate how many times the correct input is submitted to the score board
+    correctCount.innerHTML = correctScore 
     charFront.innerText = "" //to create a blank card once the next card is up
 }
 
@@ -99,9 +100,3 @@ submitButton.addEventListener('click', openModal)
 closeButton.addEventListener('click', closeModal)
 nextCardButton.addEventListener('click', nextCard)
 card.addEventListener('keydown', flipped )
-// inputText.addEventListener('keypress', function(e1) {
-//     if(e1.keyCode === 'Enter') {
-//         e1.preventDefault()
-//         inputText.click()
-//     }
-// })

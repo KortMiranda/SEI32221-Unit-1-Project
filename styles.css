@@ -67,11 +67,13 @@ h4 {
     height: 100%;
     text-align: center;
     border: 1px solid #FFD60A;
-    transition: transform 1s;
+    /* initiates the flip animation */
+    transition: transform 1s; 
     transform-style: preserve-3d;
 }
 
 .card.is-flipped {
+    /* for when the flip is called in js */
     transform: rotateY(180deg);
 }
 
@@ -81,6 +83,7 @@ h4 {
     height: 100%;
     line-height: 100px;
     text-align: center;
+    /* to keep the back of card hidden until flip is called */
     backface-visibility: hidden;
 }
 
@@ -90,6 +93,7 @@ h4 {
 
 .card__face--back{
     background-color: rgba(46, 46, 46, 0.85);
+    /* to flip the card back to front */
     transform: rotateY(180deg);
 }
 
@@ -154,12 +158,12 @@ h4 {
     height: 100%;
     width: 100%;
     z-index: 1;
-    ;
     overflow: auto;
     display: none;
 } 
 
-#modal-textbox {
+#modal-textbox-correct,
+#modal-textbox-incorrect{
     background-color: rgba(82, 82, 82, .90);
     height: 350px;
     width: 550px;
