@@ -1,5 +1,6 @@
 # SEI32221-Unit-1-Project
 
+<img src="resources/Project-one-screenshot.png" width="500">
 
 ## Technologies Used
 
