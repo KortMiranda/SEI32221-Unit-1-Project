@@ -29,6 +29,12 @@
 
 ## Wireframes
 
+<img src="wireframes/front-card.png" width ="500">
+<img src="wireframes/back-card.png" width = "500">
+<img src="wireframes/correct-modal.png" width = "500">
+<img src="wireframes/incorrect-modal.png" width = "500">
+
+
 ## Unsolved problems
 
 * The enter button will not work within the input bar regardless I tried creating a function for it and adding the event.PreventDefault(). If the enter button is pressed, it will refresh the whole screen and reset the score board. 
