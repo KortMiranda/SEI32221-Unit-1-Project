@@ -1,6 +1,6 @@
-# SEI32221-Unit-1-Project
+# Star Wars Typing Game
 
-<img src="resources/Project-one-screenshot.png" width="500">
+<img src="resources/Project-one-screenshot.png" width="550">
 
 ## Technologies Used
 
@@ -29,10 +29,10 @@
 
 ## Wireframes
 
-<img src="wireframes/front-card.png" width ="500">
-<img src="wireframes/back-card.png" width = "500">
-<img src="wireframes/correct-modal.png" width = "500">
-<img src="wireframes/incorrect-modal.png" width = "500">
+<img width="650" alt="Screen Shot 2021-05-13 at 8 22 53 PM" src="https://user-images.githubusercontent.com/74841038/118208216-f744b280-b42b-11eb-8f2c-6e7a7d547886.png">
+<img width="650" alt="Screen Shot 2021-05-13 at 8 23 29 PM" src="https://user-images.githubusercontent.com/74841038/118208258-0a578280-b42c-11eb-908e-f4c03c7ecb82.png">
+<img width="650" alt="Screen Shot 2021-05-13 at 8 23 57 PM" src="https://user-images.githubusercontent.com/74841038/118208411-54d8ff00-b42c-11eb-87f7-cb7b7f0dd7e2.png">
+<img width="650" alt="Screen Shot 2021-05-13 at 8 23 42 PM" src="https://user-images.githubusercontent.com/74841038/118208690-d335a100-b42c-11eb-95cc-925f384adf87.png">
 
 
 ## Unsolved problems
