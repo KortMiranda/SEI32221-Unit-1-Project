@@ -9,15 +9,6 @@
 * Javascript
 * SWAPI
 
-## Installation Instructions
-
-* Click on the link at the end of this markdown
-* A single flashcard will load up with a button that says "Click for a name!" and once clicked a Star Wars character will generate on the card.
-* Use either the left or right keys on the keyboard to flip to the back side of the card to reveal the text input bar.
-* Enter the character's name above the text bar and click the "Correct, it is?" button to see if your entry matches the name above. 
-* If entry is correct, click the "Next card" on the modal to generate a new card and click for another name. 
-* If entry is incorrect, a modal will notify you the entry was wrong and to prompt you to try again with the "try again" button and once clicked you will be return back to the card to try the entry again. 
-
 ## User stories
 
 * As the student, I want to be able to use specificed keyboard keys to flip the card from the front to back and vice versa.
