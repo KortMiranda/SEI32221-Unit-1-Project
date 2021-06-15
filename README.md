@@ -1,5 +1,9 @@
 # Star Wars Typing Game
 
+## Deployed App
+
+https://sw-typing-game.herokuapp.com/
+
 <img src="resources/Project-one-screenshot.png" width="550">
 
 ## Technologies Used
@@ -46,6 +50,4 @@
 * https://www.eventeny.com/company/product/?p=25061 (Han Solo image)
 * https://www.themarysue.com/meet-and-greet-baby-yoda/ (Grogu image)
 
-## Deployed App
 
-https://sw-typing-game.herokuapp.com/
