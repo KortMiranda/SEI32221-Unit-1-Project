@@ -46,6 +46,6 @@
 * https://www.eventeny.com/company/product/?p=25061 (Han Solo image)
 * https://www.themarysue.com/meet-and-greet-baby-yoda/ (Grogu image)
 
-## Project URL
+## Deployed App
 
 https://sw-typing-game.herokuapp.com/
