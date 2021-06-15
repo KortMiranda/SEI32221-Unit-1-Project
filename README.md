@@ -48,4 +48,4 @@
 
 ## Project URL
 
-https://kortmiranda.github.io/SEI32221-Unit-1-Project/
+https://sw-typing-game.herokuapp.com/
