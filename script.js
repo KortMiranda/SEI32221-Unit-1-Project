@@ -16,16 +16,16 @@ const incorrectAudio = document.querySelector('#incorrect-audio')
 const correctCount = document.querySelector('.correct')
 const incorrectCount = document.querySelector('.incorrect')
 
-//variables created for score count
+
 let correctScore = 0
 correctCount.innerHTML = correctScore
 let incorrectScore = 0
 incorrectCount.innerHTML = incorrectScore
 
 
-//retrieves name data from SWAPI
+
 async function getData() {
-    let randomId = Math.floor(Math.random() * 80) //has be declared within the function before the url
+    let randomId = Math.floor(Math.random() * 80)
     const url = `https://swapi.dev/api/people/${randomId}`
     fetch(url)
     .then(res => {
@@ -40,7 +40,7 @@ async function getData() {
     .catch(err => console.log('something went wrong', err))
 }
 
-//Determines if the user types the name in the input bar correctly
+
 const checkAnswer = () => {
     if(inputText.value.toLowerCase() === charBack.innerHTML.toLowerCase() || inputText.value === charBack.innerHTML) {
         return true
@@ -49,13 +49,12 @@ const checkAnswer = () => {
     }
 }
 
-//function that handles the flip event for the card
 const flipped = (keyEvent) => {
     if(keyEvent.keyCode == 39 || keyEvent.keyCode == 37)
     card.classList.toggle('is-flipped')   
 }
 
-//functions that trigger the sound effect to tell the user know if the input is correct or incorrect
+
 const triggerCorrectAudio = () => {
     correctAudio.play();
 }
@@ -64,7 +63,6 @@ const triggerIncorrectAudio = () => {
     incorrectAudio.play();
 }
 
-//modals to notifiy the user if input is correct or incorrect
 const openModal = () => {
     if(checkAnswer() === true) {
     correctModal.style.display = 'block';
@@ -72,29 +70,26 @@ const openModal = () => {
     } else if(checkAnswer() === false) {
     incorrectModal.style.display = 'block';
     triggerIncorrectAudio();
-    }
-    
+    }   
      
 }
 
-//the button within this modal will prevent the user from moving on until the user gets the input correct
 const closeModal = () => {
     incorrectModal.style.display = 'none';
-    incorrectScore++ //will accumulate how many times the incorrect input is submitted to the score board
+    incorrectScore++ 
     incorrectCount.innerHTML = incorrectScore 
     
 }
 
-//once the answer is correct and next card is selected, a new card will generate.
 const nextCard = () => {
     correctModal.style.display = 'none';
     card.classList.toggle('is-flipped')
-    correctScore++ // will accumulate how many times the correct input is submitted to the score board
+    correctScore++ 
     correctCount.innerHTML = correctScore 
-    charFront.innerText = "" //to create a blank card once the next card is up
+    charFront.innerText = "" 
 }
 
-//All event listeners 
+
 genButton.addEventListener('click', getData)
 submitButton.addEventListener('click', openModal)
 closeButton.addEventListener('click', closeModal)
